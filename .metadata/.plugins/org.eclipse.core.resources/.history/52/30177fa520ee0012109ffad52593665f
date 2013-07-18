@@ -1,0 +1,14 @@
+package club;
+
+public class Stadium {
+
+	private String name;
+	private int seats;
+	private int ticketprice;
+	private int buildYear;
+	
+	public Stadium(){
+		name = setStadiumName;
+		seats
+	}
+}

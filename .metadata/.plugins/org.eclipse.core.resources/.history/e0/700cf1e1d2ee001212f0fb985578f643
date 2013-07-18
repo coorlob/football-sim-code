@@ -1,0 +1,34 @@
+package gui;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class MainWindow extends JFrame implements ActionListener {
+
+	public MainWindow(String s) {
+		setTitle(s);
+		setSize(300, 300);
+		setLocation(10,200);
+		
+		JButton startGameButton = new JButton("Start Game");
+		
+		add(startGameButton);
+		
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		JFrame f = new MainWindow("Hello World");
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

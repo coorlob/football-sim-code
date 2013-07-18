@@ -1,0 +1,10 @@
+package playerRandomizer;
+
+public class KeeperRandomizer extends BaseRandomizer {
+
+	public KeeperRandomizer(int age, String name, String surname) {
+		super(age, name, surname);
+		// TODO Auto-generated constructor stub
+	}
+
+}

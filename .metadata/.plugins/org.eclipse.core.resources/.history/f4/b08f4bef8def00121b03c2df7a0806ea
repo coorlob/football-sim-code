@@ -1,0 +1,79 @@
+package gui;
+
+import gui.CompetitionStandings.ActionList;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TeamWindow extends JFrame {
+	
+	private String switchPlayer;
+	private int indexPlayerToBeSwitched = -1 ;
+	private JList listOfPlayerToBeSwitched;
+
+	public TeamWindow(){
+		
+		setSize(150, 500);
+		setLocation(100,100);
+		
+		Container c;
+		c=getContentPane();
+		c.setBackground(Color.WHITE);
+		c.setLayout(new FlowLayout());
+		
+		JTextField teamName = new JTextField("aaba", 20);
+		teamName.setEditable(false);
+		teamName.setName("Teamnaam");
+		
+		JPanel teamListPanel = new JPanel();
+		String teams[] = {"a","b","c","d","e"};
+		JList teamList = new JList(teams);
+		teamList.addMouseListener(new ActionList(teamList));
+		teamListPanel.add(teamList);
+		
+		String otherPlayers[] = {"wat", "is", "deze", "?", "!"};
+		JList otherPlayersList = new JList(otherPlayers);
+		otherPlayersList.addMouseListener(new ActionList(otherPlayersList));
+		teamListPanel.add(otherPlayersList);
+		
+		
+		c.add(teamListPanel);
+		c.add(teamName);
+		
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+	
+	class ActionList extends MouseAdapter{
+		private JList list;
+		
+		public ActionList(JList l){
+			list = l;
+		}
+		
+		public void mouseClicked(MouseEvent e){
+			int index = list.locationToIndex(e.getPoint());
+			ListModel dlm = list.getModel();
+			Object item = dlm.getElementAt(index);
+			list.ensureIndexIsVisible(index);
+			if(e.getClickCount() == 1){
+				if(!switchPlayer.equals(null)){
+					indexPlayerToBeSwitched = -1;
+				}
+				
+				else if(switchPlayer.equals(null) && indexPlayerToBeSwitched == -1  && listOfPlayerToBeSwitched == null){
+					switchPlayer = (String) item;
+					indexPlayerToBeSwitched = index;
+					
+				}
+			}
+			if(e.getClickCount() == 2){
+				System.out.println(item);
+			}
+		}
+	}
+	
+}

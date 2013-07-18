@@ -1,0 +1,18 @@
+package gui;
+
+import javax.swing.*;
+
+public class MainWindow extends JFrame {
+
+	public MainWindow() {
+		setTitle("Hoofdscherm");
+		setSize(300, 300);
+		setLocation(10,200);
+	}
+	
+	public static void main(String[] args){
+		JFrame f = new MainWindow();
+		f.setVisible(true);
+	}
+	
+}

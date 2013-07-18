@@ -1,0 +1,14 @@
+package speler;
+
+import playerRandomizer.PlayerStatsRandomizer;
+
+public class NewPlayer {
+
+	public static void main(String[] args) {
+		SpelerBasis speler = new SpelerBasis("Midfielder");
+		System.out.println(speler.toString());
+		
+
+	}
+
+}

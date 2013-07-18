@@ -1,0 +1,11 @@
+package club;
+
+import squad.Squad;
+
+public class Club {
+
+	
+	public Club(){
+		Squad clubSquad = new Squad();
+	}
+}

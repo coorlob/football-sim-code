@@ -1,0 +1,5 @@
+package playerRandomizer;
+
+public class KeeperRandomizer extends BaseRandomizer {
+
+}

@@ -1,0 +1,39 @@
+package squad;
+
+import java.util.ArrayList;
+
+import speler.Player;
+
+public class Squad {
+
+	ArrayList<Player> squad;
+	
+	public Squad(){
+		this.squad = newSquad();
+	}
+	
+	public ArrayList<Player> newSquad(){
+		int i = 0;
+			for(int j = 0; j<4; j++){
+				Player speler = new Player("Keeper");
+				squad.add(i, speler);
+				i++;
+			}
+			for(int j = 0; j<6; j++){
+				Player speler = new Player("Defender");
+				squad.add(i, speler);
+				i++;
+			}
+			for(int j = 0; j<6; j++){
+				Player speler = new Player("Midfielder");
+				squad.add(i, speler);
+				i++;
+			}
+			for(int j = 0; j<6; j++){
+				Player speler = new Player("Attacker");
+				squad.add(i, speler);
+				i++;
+			}
+			return squad;
+		}
+}

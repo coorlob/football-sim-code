@@ -1,0 +1,66 @@
+package speler;
+
+public class SpelerBasis {
+
+	private String name, surname;
+	private int age, keeperstats, defenseStats, attackStats;
+	
+	public SpelerBasis(String name, String surName, int age, int keeperStats, int defenseStats, int attackStats){
+		name = this.name;
+		surName = this.surname;
+		age = this.age;
+		keeperStats = this.keeperstats;
+		defenseStats = this.defenseStats;
+		attackStats = this.attackStats;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSurName() {
+		return surname;
+	}
+
+	public void setSurName(String surName) {
+		this.surname = surName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getKeeperstats() {
+		return keeperstats;
+	}
+
+	public void setKeeperstats(int keeperstats) {
+		this.keeperstats = keeperstats;
+	}
+
+	public int getDefenseStats() {
+		return defenseStats;
+	}
+
+	public void setDefenseStats(int defenseStats) {
+		this.defenseStats = defenseStats;
+	}
+
+	public int getAttackStats() {
+		return attackStats;
+	}
+
+	public void setAttackStats(int attackStats) {
+		this.attackStats = attackStats;
+	}
+	
+	
+}

@@ -1,0 +1,11 @@
+package playerRandomizer;
+
+public class KeeperRandomizer extends BaseRandomizer {
+
+	public KeeperRandomizer(int age, String name, String surname,
+			int keeperStats, int defenderStats, int attackerStats) {
+		super(age, name, surname, keeperStats, defenderStats, attackerStats);
+		setBaseStats();
+	}
+
+}

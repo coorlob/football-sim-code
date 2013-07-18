@@ -1,0 +1,12 @@
+package speler;
+
+public class NewPlayer {
+
+	public static void main(String[] args) {
+		SpelerBasis speler = new SpelerBasis("Keeper");
+		System.out.println(speler.toString());
+		
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package playerRandomizer;
+
+import java.util.Random;
+
+public class BaseRandomizer {
+
+	private int age, keeperStats, defenderStats, attackerStats;
+	private String name, surname;
+	Random random = new Random();
+	
+	public BaseRandomizer(int age, String name, String surname, int keeperStats, int defenderStats, int attackerStats){
+		age = this.age;
+		name = this.name;
+		surname = this.surname;
+		keeperStats = this.keeperStats;
+		defenderStats = this.defenderStats;
+		attackerStats = this.attackerStats;
+	}
+	
+	private void randomAge(){
+		age = random.nextInt(20) +15;  
+	}
+	
+	private void randomName(){
+		name = "aaaaaa";
+		surname = "bbbbbbb";
+	}
+	
+	public void setBaseStats(){
+		this.keeperStats = this.attackerStats = this.defenderStats = 40;
+	}
+}

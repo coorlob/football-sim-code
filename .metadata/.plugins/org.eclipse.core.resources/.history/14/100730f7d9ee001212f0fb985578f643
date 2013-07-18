@@ -1,0 +1,27 @@
+package gui;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class ButtonPanel extends JPanel {
+	  // members:
+	  private JButton redButton;
+	  private JButton blueButton;
+	  // constructors:
+	  public ButtonPanel() {
+
+	    // create buttons
+	    redButton = new JButton("RED");
+	    blueButton = new JButton("BLUE");
+
+	    // add buttons to current panel
+	    add(redButton);  // add button to current panel
+	    add(blueButton); // add button to current panel
+
+	    // register the current panel as listener for the buttons
+	    redButton.addActionListener(this);  
+	    blueButton.addActionListener(this); 
+
+	  } // ButtonPanel constructor
+	} // ButtonPanel class

@@ -1,0 +1,25 @@
+package playerRandomizer;
+
+import java.util.Random;
+
+public class BaseRandomizer {
+
+	private int age;
+	private String name, surname;
+	Random random = new Random();
+	
+	public BaseRandomizer(int age, String name, String surname){
+		age = this.age;
+		name = this.name;
+		surname = this.surname;
+	}
+	
+	private void randomAge(){
+		age = random.nextInt(20) +15;  
+	}
+	
+	private void randomName(){
+		name = "aaaaaa";
+		surname = "bbbbbbb";
+	}
+}

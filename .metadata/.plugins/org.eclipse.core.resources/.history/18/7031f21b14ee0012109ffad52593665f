@@ -1,0 +1,32 @@
+package squad;
+
+import java.util.ArrayList;
+
+import speler.Player;
+
+public class Team {
+
+	private ArrayList<Player> team;
+	private ArrayList<Player> keepers;
+	private ArrayList<Player> midfielders;
+	private ArrayList<Player> defenders;
+	private ArrayList<Player> attackers;
+	
+	public Team(ArrayList<Player> keepers, ArrayList<Player> defenders, ArrayList<Player> midfielders, ArrayList<Player> attackers){
+		this.keepers = keepers;
+		this.defenders = defenders;
+		this.midfielders = midfielders;
+		this.attackers = attackers;
+		team = new ArrayList<Player>();
+		formation(null);
+	}
+	
+	private ArrayList<Player> formation(int[] order){
+		if(order.length == 3 && order[0] + order[1] + order[2] == 10){
+			
+		}
+		
+		return attackers;
+		
+	}
+}
